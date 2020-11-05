@@ -75,7 +75,7 @@ async def 테스트2(ctx):
 #셀 좌표로 값 출력
 #print(load_ws.cell(1,8).value)
 
-access_token = os.environ['BOT_TOKEN']
+access_token = os.environ["BOT_TOKEN"]
 bot.run(token) 
 
 
