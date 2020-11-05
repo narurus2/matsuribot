@@ -2,15 +2,21 @@ import asyncio,discord,os
 from openpyxl import load_workbook
 from discord.ext import commands
 
+
+client = discord.Client()
+
+
 #토큰
 token_path = os.path.dirname( os.path.abspath( __file__ ))+"/token.txt" #텍스트 파일로 부터 토큰 불러옴
 t = open(token_path,"r",encoding="utf-8")
 token = t.read().split()[0] #토큰을 변수에 저장
 #print("Token_key : ",token)
 
+'''
 #봇의 설정
 game = discord.Game("!도움") #코멘트 설정
 bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game) #봇의 상태 설정
+'''
 
 #봇 시작
 @bot.event
@@ -76,7 +82,7 @@ async def 테스트2(ctx):
 #print(load_ws.cell(1,8).value)
 
 access_token = os.environ['BOT_TOKEN']
-bot.run(access_token) 
+client.run(access_token) 
 
 
 
