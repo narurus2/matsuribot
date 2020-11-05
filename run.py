@@ -6,7 +6,7 @@ from discord.ext import commands
 token_path = os.path.dirname( os.path.abspath( __file__ ))+"/token.txt" #텍스트 파일로 부터 토큰 불러옴
 t = open(token_path,"r",encoding="utf-8")
 token = t.read().split()[0] #토큰을 변수에 저장
-print("Token_key : ",token)
+#print("Token_key : ",token)
 
 #봇의 설정
 game = discord.Game("!도움") #코멘트 설정
@@ -75,6 +75,7 @@ async def 테스트2(ctx):
 #셀 좌표로 값 출력
 #print(load_ws.cell(1,8).value)
 
+access_token = os.environ['BOT_TOKEN']
 bot.run(token) 
 
 
