@@ -76,7 +76,7 @@ async def 테스트2(ctx):
 #print(load_ws.cell(1,8).value)
 
 access_token = os.environ["BOT_TOKEN"]
-bot.run(token) 
+bot.run(access_token) 
 
 
 
